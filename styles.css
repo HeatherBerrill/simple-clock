@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+/* --secondary-color: rgb(117, 236, 113); */
+:root {
+  --primary-color: rgb(10, 27, 71);
+  --secondary-color: rgb(156, 255, 153);
+  --tertiary-color: rgb(51, 74, 133);
+}
+
+html {
+  transition: all 0.5s ease-in;
+  background-color: rgb(156, 255, 153);
+}
+html.dark {
+  --primary-color: rgb(156, 255, 153);
+  --secondary-color: rgb(10, 27, 71);
+  --tertiary-color: rgb(168, 236, 180);
+}
+
+html.dark {
+  background-color: rgb(10, 27, 71);
+  color: var(--primary-color);
+}
+
+body {
+  font-family: 'Patrick Hand', cursive;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.toggle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: 'Patrick Hand', cursive;
+  font-size: 16px;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 100px;
+  margin-bottom: 35px;
+}
+
+.toggle:focus {
+  outline: none;
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.needle {
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+}
+
+.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+.needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+}
+
+.needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+  background-color: rgb(187, 3, 3);
+}
+
+.center-point {
+  background-color: rgb(187, 3, 3);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.center-point::after {
+  content: '';
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.time {
+  font-size: 60px;
+  color: var(--tertiary-color);
+}
+
+.date {
+  color: var(--primary-color);
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.date .circle {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  height: 26px;
+  width: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 18px;
+  transition: all 0.5s ease-in;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.date-circle {
+  margin-left: 5px;
+}
