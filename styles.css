@@ -3,21 +3,21 @@
 * {
   box-sizing: border-box;
 }
-/* --secondary-color: rgb(117, 236, 113); */
+
 :root {
   --primary-color: rgb(10, 27, 71);
-  --secondary-color: rgb(156, 255, 153);
+  --secondary-color: rgb(151, 224, 202);
   --tertiary-color: rgb(51, 74, 133);
 }
 
 html {
   transition: all 0.5s ease-in;
-  background-color: rgb(156, 255, 153);
+  background-color: rgb(151, 224, 202);
 }
 html.dark {
-  --primary-color: rgb(156, 255, 153);
+  --primary-color: rgb(151, 224, 202);
   --secondary-color: rgb(10, 27, 71);
-  --tertiary-color: rgb(168, 236, 180);
+  --tertiary-color: rgb(112, 132, 180);
 }
 
 html.dark {
@@ -46,8 +46,8 @@ body {
   border-radius: 4px;
   padding: 8px 12px;
   position: absolute;
-  top: 100px;
-  margin-bottom: 35px;
+  top: 75px;
+  margin-bottom: 25px;
 }
 
 .toggle:focus {
@@ -55,6 +55,10 @@ body {
 }
 
 .clock-container {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 50%;
+  margin: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
